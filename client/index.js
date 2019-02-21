@@ -7,3 +7,7 @@ const state = window.__STATE__;
 delete window.__STATE__;
 
 hydrate(<App {...state} />, document.getElementById("root"));
+
+if (module.hot) {
+  module.hot.accept();
+}
